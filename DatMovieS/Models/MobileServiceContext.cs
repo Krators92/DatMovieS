@@ -34,5 +34,17 @@ namespace DatMovieS.Models
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
+
+        public System.Data.Entity.DbSet<DatMovieS.DataObjects.Follow> Follows { get; set; }
+
+        public System.Data.Entity.DbSet<DatMovieS.DataObjects.Clip> Clips { get; set; }
+
+        public System.Data.Entity.DbSet<DatMovieS.DataObjects.Likes> Likes { get; set; }
+
+        public System.Data.Entity.DbSet<DatMovieS.DataObjects.Story> Stories { get; set; }
+
+        public System.Data.Entity.DbSet<DatMovieS.DataObjects.StoryLike> StoryLikes { get; set; }
+
+        public System.Data.Entity.DbSet<DatMovieS.DataObjects.User> Users { get; set; }
     }
 }
